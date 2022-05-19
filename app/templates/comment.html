@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+<div class="container">
+    <div class="col-md-8">
+        {{ wtf.quick_form(comment_form)}}
+
+    </div>
+    <br>
+        <button id="back"><a href="/"> Back to pitches </a>
+        </button>  
+    
+    <br><br>
+    <div class="comment">
+        
+        {{macro.displayComments(comment)}}
+    </div>
+    
+</div>
+
+{% endblock %}

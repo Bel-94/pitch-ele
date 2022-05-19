@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    
+    <div class="container">
+        <div class="main" >
+            <h2 style="color: #d83f87; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif " >Welcome to Pitch~Pod</h2>
+            <p style="font-size:larger; color: white" >In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?</p><br>
+            <a href="/pitch/new" id="new_pitch" style="color: #d83f87" >Add pitch</a>
+        </div>
+        
+        <div id="content" style="margin-top:2vw;">
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li class="active"><a href="#promotion" data-toggle="tab">Promotion</a></li>
+                <li><a href="#interview" data-toggle="tab">Interview</a></li>
+                <li><a href="#business" data-toggle="tab">Business</a></li>
+                <li><a href="#product" data-toggle="tab">Product</a></li>
+               
+            </ul>
+            <div id="my-tab-content" class="tab-content">
+            
+                <div class="tab-pane active" id="promotion">
+                 
+                    <br>
+                    <div class="content" id="promotion">
+                       
+                        <div class="tab-content">
+                            <div class="Pitch">
+                                {{macro.displayPitches(promotionpitches)}}
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane active" id="interview">
+                    <br>
+                    <div class="content" id="interview">
+                        <div class="tab-content">
+                            <div class="Pitch">
+                                {{macro.displayPitches(interviewpitches)}}
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="business">     
+                    <br>
+                    <br>
+                    <div class="content" id="interview">
+
+                        <div class="tab-content">
+                            <div class="Pitch">
+                               
+                                {{macro.displayPitches(businesspitches)}}
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="product">
+                    <br>
+                    <br>
+                    <div class="content" id="product">
+
+                        <div class="tab-content">
+                            <div class="Pitch">
+                                {{macro.displayPitches(productpitches)}}
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        </div>
+    
+</body>
+{% endblock %}

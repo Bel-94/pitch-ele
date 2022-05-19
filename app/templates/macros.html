@@ -1,0 +1,67 @@
+{% macro displayPitches(pitches) %}
+
+    {% for pitch in pitches %}
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="media-body">
+                    <div class="thumbnail" style="background-color: transparent;">
+                        <div class="row">
+                            <div class="col-md-2 img-responsive">
+                                
+                            </div>
+                            <div class="col-md-10">
+                                <p class="pitch-metadata">
+                                    <h3 class="inline">
+                                        <a class="pitch-title" id="pitch-title" href="#">{{pitch.title}}</a>
+                                    </h3>
+                                    <small class="text-muted">  Posted on {{pitch.posted.strftime('%d/%m/%Y')}} | {{pitch.category}}</small>
+                                   
+                                </p>
+                                <p class="pitch-content">{{pitch.content}}</p>
+                                <small class="text-muted">
+                                    Author {{pitch.user.username}}
+                                </small>
+                                <br>
+                                <br>
+                               <div class="bottom">
+                                    <a href="{{url_for('main.comment',pitch_id=pitch.id)}}" class= "btn btn-primary btn-sm"> Comment</a>
+                                    <a href="{{url_for('main.like',pitch_id=pitch.id)}}" class= "btn btn-primary btn-sm"> UpVote{{pitch.upvotes.count()}}</a>
+                                    <a href="{{url_for('main.dislike',pitch_id=pitch.id)}}" class= "btn btn-danger btn-sm"> DownVote{{pitch.downvotes.count()}}</a>
+                               </div>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endmacro %}
+
+<!-- -------------COMMENT SECTION ---------------- -->
+{% macro displayComments(all_comments) %}
+{% if all_comments %}
+    {% for comment in all_comments %}
+    <div class="row" >
+        <div class="col-sm-12">
+        <div class="col-md-4" id="com" >
+                <b>Comment:{{comment.comment}}</b>
+                <br><br>
+                <i>By: {{comment.user.username}}</i>
+
+           
+  
+        </div>  </div>
+    </div>
+{% endfor %}
+{% else %}
+{% endif %}
+{% endmacro %}

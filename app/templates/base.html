@@ -1,0 +1,21 @@
+{% extends 'bootstrap/base.html'%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title>Elevator-Pitch </title>
+        {% endif %}
+    </head>
+    <body>
+        {% block navbar%}
+        {% include 'navbar.html' %}
+        {% endblock %}
+        {% block content %}
+
+        {% endblock%}
+
+    </body>
+</html>
