@@ -1,11 +1,11 @@
-<h1>Pitch~Pod</h1>
+<h1>Your~Blogr</h1>
 
 <h2>By Belinda Ntinyari<h2>
 
-<p>This is a web app where users can access any kind of pitch as well as add their own pitch.</p>
+<p>This is a personal blog app where you can create and share your opinions and other users can read and comment on them. The users can also access random quotes to inspire them.</p>
 
 <h3>Description </h3>
-<p>This is an application that contains popular pitches across different fields. Users can add their own pitches, comment, upvote and downvote the quotes.</p>
+<p>This is an application where users can view random quotes and blogs.</p>
 
 <h3>Requirements for Installation</h3>
 <ul>
@@ -20,7 +20,7 @@ To get the code:
     <li>You can fork the project to add it as one of your repositories.
     <li>Clone the repo link from github</li>
     <li>Then clone the link in your machine using the following command: 
-    <p>git clone https://github.com/Bel-94/Elevator-Pitch.git</p>
+    <p>git clone https://github.com/Bel-94/personal-blog.git</p>
     </li>
 </ol>
 
@@ -28,12 +28,13 @@ To get the code:
 <p>The user is able to</p>
 
 <ul>
-    <li>The user will be able to see the pitches other people have posted.</li>
-    <li>The user will be able to vote on the pitch they liked and give it a downvote or upvote.</li>
+    <li>The user will be able to view the blog posts on the site.</li>
+    <li>The user will be able to view the most recent posts.</li>
     <li>The user can leave a comment. </li>
-    <li>The user can view the pitches I have created in my profile page. </li>
-    <li>The user can comment on the different pitches and leave feedback.</li>
-    <li>The user can submit and view pitch from the different categories.</li>
+    <li>The user can receive an email alert when a new post is made by joining a subscription. </li>
+    <li>The user can create a blog from the application</li>
+    <li>The user can delete comments that they don't like.</li>
+    <li>The user will be able to update/delete blogs they have created.</li>
 </ul>
 
 <h3>Technologies Used</h3>
